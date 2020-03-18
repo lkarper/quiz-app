@@ -74,7 +74,7 @@ function loadNextQuestion() {
                     <button type="submit" class="check-answer button">Submit</button>
                 </form>
             </div>
-            <img src="/images/question-image.jpg" alt="Relief of four Roman men" class="question-image">
+            <img src="images/question-image.jpg" alt="Relief of four Roman men" class="question-image">
         </section>
     `);
 }
@@ -114,7 +114,7 @@ function loadNextAnswer() {
                     <p>Question: "${question}"</p>
                     <h2>Correct! The answer is "${selectedOption}"!</h2>
                 </div>
-                <img src="/images/${correctAnswer}-small.jpg" alt="Image of ${correctAnswer}" class="answer-image">
+                <img src="images/${correctAnswer}-small.jpg" alt="Image of ${correctAnswer}" class="answer-image">
             </div>
             <button type="submit" class="next-question button">Next</button>
         `)
@@ -127,7 +127,7 @@ function loadNextAnswer() {
                     <h2>Sorry, your response of "${selectedOption}" is not correct</h2>
                     <h2>The correct answer is: "${correctAnswer}"</h2>
                 </div>
-                <img src="/images/${correctAnswer}-small.jpg" alt="Image of ${correctAnswer}" class="answer-image">
+                <img src="images/${correctAnswer}-small.jpg" alt="Image of ${correctAnswer}" class="answer-image">
             </div>
                 <button type="submit" class="next-question button">Next</button>
         `);
@@ -157,7 +157,7 @@ function checkFinalScore() {
                 <h2>You scored ${currentScore} out of ${questions.length}!</h2>
                 <p>Tacitus would be proud!</p>
             </div>
-            <img src="/images/Tacitus.jpg" alt="Engraving of the historian Tacitus" class="score-image"> 
+            <img src="images/Tacitus.jpg" alt="Engraving of the historian Tacitus" class="score-image"> 
         `;
     } else if (currentScore > 5) {
         return `
@@ -165,7 +165,7 @@ function checkFinalScore() {
                 <h2>You scored ${currentScore} out of ${questions.length}!</h2>
                 <p>An effort worthy of Suetonius!</p>
             </div>
-            <img src="/images/Suetonius.jfif" alt="Bust of the biographer Suetonius" class="score-image">
+            <img src="images/Suetonius.jfif" alt="Bust of the biographer Suetonius" class="score-image">
         `;
     } else {
         return `
@@ -173,7 +173,7 @@ function checkFinalScore() {
                 <h2>You scored ${currentScore} out of ${questions.length}!</h2>
                 <p>Perhaps you've been reading too much Livy and dwelling on the Republic...</p>
             </div>
-            <img src="/images/Livy.png" alt="Engraving of the historian Livy" class="score-image">
+            <img src="images/Livy.png" alt="Engraving of the historian Livy" class="score-image">
         `;
     }
 }

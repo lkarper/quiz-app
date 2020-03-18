@@ -9,7 +9,7 @@ body {
     background: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ),url(/images/arapacis.jpg);
+      ),url(images/arapacis.jpg);
     background-size: cover;
 }
 
