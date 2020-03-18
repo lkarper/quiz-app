@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url(/images/arapacis.jpg);
+    background-size: cover;
+}
+
+main {
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.quiz-field {
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 1%;
+    width: 90%;
+    border: 1px solid black;
+    background: rgba(110, 110, 108, 0.8);
+    color: white;
+    text-shadow: 1px 1px black;
+}
+
+.landing-images {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-landing {
+    width: 20%;
+    height: auto;
+}
+
+.button {
+    font-size: 20px;
+    display: block;
+    margin: 20px auto 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.quiz-option {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.check-answer {
+    width: 100px;
+    margin: 10px auto;
+}
+
+.answer-image {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 10px auto;
+}
+
+.score-image {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 10px auto;
+}
+
+p {
+    font-size: 20px;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+.question-image {
+    display: none;
+}
+
+.score-text {
+    text-align: center;
+}
+
+@media screen and (min-width: 750px) {
+    h1 {
+        padding: 5px;
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    .quiz-option {
+        font-size: 25px;
+    }
+
+    .button {
+        width: 100px;
+        height: auto;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    p {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .quiz-option {
+        font-size: 30px;
+    }
+
+    .quiz-field {
+        max-width: 1500px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .answer-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .answer-image {
+        height: 500px;
+        width: auto;
+        margin: 10px;
+    }
+
+    .question-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .question-image {
+        display: inline-block;
+        width: 50%;
+        height: auto;
+        margin: 10px;
+    }
+
+    .score-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .score-image {
+        height: 500px;
+        width: auto;
+        margin: 10px;
+    }
+
+}
