@@ -24,7 +24,7 @@ header {
 }
 
 .quiz-field {
-    padding: 10px;
+    padding: 20px;
     margin: 10px auto;
     border-radius: 1%;
     width: 90%;
@@ -50,9 +50,12 @@ header {
     margin: 20px auto 10px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+input[type="radio"] {
+    margin-left: 10px;
+}
+
+input[type="radio"], label {
+    display: inline-block;
 }
 
 .quiz-option {
@@ -83,8 +86,20 @@ p {
     font-size: 20px;
 }
 
-h2 {
-    font-weight: 400;
+.answer-page-question {
+    font-size: 25px;
+}
+
+.answer-page-response {
+    font-size: 25px;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 25px;
 }
 
 .question-image {
@@ -105,7 +120,19 @@ h2 {
         font-size: 25px;
     }
 
-    h2 {
+    .answer-page-question {
+        font-size: 35px;
+    }
+    
+    .answer-page-response {
+        font-size: 35px;
+    }
+
+    .final-score-report, .final-score-report + p {
+        font-size: 35px;
+    }
+
+    legend {
         font-size: 35px;
     }
 
@@ -125,7 +152,19 @@ h2 {
         font-size: 30px;
     }
 
-    h2 {
+    .answer-page-question {
+        font-size: 40px;
+    }
+    
+    .answer-page-response {
+        font-size: 40px;
+    }
+
+    .final-score-report, .final-score-report + p {
+        font-size: 40px;
+    }
+
+    legend {
         font-size: 40px;
     }
 
