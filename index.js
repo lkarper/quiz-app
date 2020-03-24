@@ -56,7 +56,7 @@
     let currentScore = 0;
 
     // add event listener to button that starts quiz
-    function handlBeginQuiz() {
+    function handleBeginQuiz() {
         $('.quiz-field').on('click', '.start-quiz', () => loadNextQuestion());
     }
 
@@ -71,7 +71,7 @@
     // add event listener to button that loads the next questions
     function handleNextQuestion() { 
         $('.quiz-field').on('click', '.next-question', () => {
-            currentQuestion +=1;
+            currentQuestion += 1;
             if (currentQuestion > questions.length) {
                 finalScore();
             } else {
@@ -85,30 +85,30 @@
         $('.quiz-field').on('click', '.restart', () => restart());
     }
 
-    // fetch question
+    // fetch question-object from array
     function fetchQuestion() {
         return questions[currentQuestion-1];
     }
 
-    // retrieve question from object in array
+    // retrieve question from question-object in array
     function parseQuestion() {
         const nextQuestion = fetchQuestion();
         return nextQuestion.question;
     }
 
-    // retrieve options from object in array
+    // retrieve options from question-object in array
     function parseOptions() {
         const nextQuestion = fetchQuestion();
         return nextQuestion.options;
     }
 
-    // retrieve correct answer from object in array
+    // retrieve correct answer from question-object in array
     function parseAnswer() {
         const nextQuestion = fetchQuestion();
         return nextQuestion.correctAnswer;
     }
 
-    // load options from question object into array of HTML
+    // load options from question-object into array of HTML
     function loadOptions() {
         const options = parseOptions();
         const optionsHTML = [];
@@ -129,7 +129,7 @@
         $('.quiz-field').html(`
             <div class="question-section">
                 <div class="question-text">
-                    <section class="score-and-result">
+                    <section class="score-and-progress">
                         <p>Quiz progress: ${currentQuestion}/${questions.length}</p>
                         <p>Current score: ${currentScore}/${questions.length}</p>
                     </section>
@@ -146,7 +146,7 @@
         `);
     }
 
-    // check answer
+    // check if user's response matches correct answer
     function checkAnswer(correctAnswer) {
         return $(`#${correctAnswer}:checked`).val();
     }
@@ -168,7 +168,7 @@
         $('.quiz-field').html(`
                 <div class="answer-page">
                     <div class="answer-text">
-                        <section class="score-and-result">
+                        <section class="score-and-progress">
                             <p>Quiz progress: ${currentQuestion}/${questions.length}</p>
                             <p>Current score: ${currentScore}/${questions.length}</p>
                         </section>
@@ -177,7 +177,7 @@
                     </div>
                     <img src="images/${correctAnswer}-small.jpg" alt="Image of ${correctAnswer}" class="answer-image">
                 </div>
-                <button type="submit" class="next-question button">Next</button>
+                <button type="button" class="next-question button">Next</button>
             `);
     }
 
@@ -194,7 +194,7 @@
                     </div>
                     <img src="images/${correctAnswer}-small.jpg" alt="Image of ${correctAnswer}" class="answer-image">
                 </div>
-                <button type="submit" class="next-question button">Next</button>
+                <button type="button" class="next-question button">Next</button>
             `);
     }
 
@@ -210,17 +210,17 @@
 
     // increase score
     function updateScore(result) {
-        if (result) currentScore +=1;
+        if (result) currentScore += 1;
     }
 
     // display final score
     function finalScore() {
         const resultResponse = checkFinalScore();
         $('.quiz-field').html(`
-            <div class="score-content">
+            <section class="score-content">
                 ${resultResponse}
-            </div>
-            <button type="submit" class="restart button">Retry</button>
+            </section>
+            <button type="button" class="restart button">Retry</button>
         `);
     }
 
@@ -262,10 +262,11 @@
 
     // initial callbackfunction
     function handleQuizApp () {
-        handlBeginQuiz();
+        handleBeginQuiz();
         handleNextQuestion();
         handleSubmitQuestion();
         handleRestart();
     }
 
-    $(handleQuizApp);})();
+    $(handleQuizApp);
+})();
